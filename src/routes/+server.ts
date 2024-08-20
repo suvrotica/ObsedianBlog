@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit';
 
 export async function GET({ url, fetch }: RequestEvent) {
 	const obsidianUrl = new URL('https://publish.obsidian.md/serve');
-	obsidianUrl.searchParams.set('url', 'suvro-ghosh-dot-blog.vercel.app' + url.pathname + url.search);
+	obsidianUrl.searchParams.set('url', 'obsedian-blog.vercel.app' + url.pathname + url.search);
 
 	const res = await fetch(obsidianUrl);
 
